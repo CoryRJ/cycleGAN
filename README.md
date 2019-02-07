@@ -11,6 +11,7 @@ Rows 1 and 4: Original Images
 Rows 2 and 5: Cycle consistency F->M->F and M->F->M
 Rows 3 and 6: Domain transfer F->M and M->F
 
+This particular project could probably use some more training, but overall I see it as a success. Male<->Female translation has been shelved for something else that I am currently working on.
+
 The structure of the generator I used differs slightly from that of the paper, but not significantly - I just used some extra skip layers. The current uploaded cycleGAN implementation is the most recent one I am currently working with, so to get it working on celebA you will need to update some variables.
 
-This particular project has been shelved for something else that I am currently working on.
