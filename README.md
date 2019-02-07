@@ -2,6 +2,12 @@
 My implementation of cycleGAN (https://arxiv.org/pdf/1703.10593.pdf), included are some helper files. This uses Tensorflow.
 CycleGAN is a method used to create neural networks that can translate from one domain to another. It consists of four neural networks: two generators than transform from one domain into the other and two discriminators that try to decide between real images and fake ones.
 
+Discriminator Architecture: This is composed of several convolutional layers with stride two, with a final fully connected layer - which is supposed to be a convolution that outputs a single number but they work out to the same thing. This is sometimes known as a patch net.
+
+Generator Architecture: Downsampled using convolutions with stride two, followed be several residual blocks, then upsampled with transposed convolutions with some skip layers from the previous down sampled layers.
+
+Mostly leaky relu is used in both networks. Training is done using mean squared error, I found it worked better than sigmoid cross entropy.
+
 
 ![results](https://user-images.githubusercontent.com/26369491/52381706-c47f0900-2a2f-11e9-897b-d4ac9b355aeb.png)
 Using cycleGAN for Male <-> Female conversion.
